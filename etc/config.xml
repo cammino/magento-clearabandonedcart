@@ -1,0 +1,20 @@
+<config>
+	<modules>
+		<Cammino_Clearabandonedcart>
+			<version>0.0.1</version>
+		</Cammino_Clearabandonedcart>
+	</modules>
+    <frontend>
+        <events>
+            <load_customer_quote_before>
+                <observers>
+                    <clearabandonedcarts>
+                        <type>singleton</type>
+                        <class>Cammino_Clearabandonedcart_Model_Observer</class>
+                        <method>clearAbandonedCarts</method>
+                    </clearabandonedcarts>
+                </observers>
+            </load_customer_quote_before>
+        </events>
+    </frontend>
+</config>
